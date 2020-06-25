@@ -47,7 +47,7 @@ public class SpringBootPlusGenerator {
 
         // 组件作者等配置
         codeGenerator
-                .setModuleName("temp")
+                .setModuleName("api")
                 .setAuthor("geekidea")
                 .setPkIdColumnName("id");
 
@@ -84,7 +84,7 @@ public class SpringBootPlusGenerator {
         // 需要生成的表数组
         // xxx,yyy,zzz为需要生成代码的表名称
         String[] tables = {
-                "FOO_BAR"
+                "user_info1"
         };
 
         // 循环生成

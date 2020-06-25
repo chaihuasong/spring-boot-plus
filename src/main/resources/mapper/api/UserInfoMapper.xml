@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.geekidea.springbootplus.api.mapper.UserInfoMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, unionid, nickname, openid, sex, headimgurl, country, province, city, language, group_id, telephone, pwd, sign, note, create_time, last_update_time
+    </sql>
+
+    <select id="getUserInfoByUnionId" resultType="io.geekidea.springbootplus.api.vo.UserInfoQueryVo">
+        select
+        <include refid="Base_Column_List"/>
+        from user_info where unionid = #{unionid}
+    </select>
+
+    <select id="getUserInfoPageList" resultType="io.geekidea.springbootplus.api.vo.UserInfoQueryVo">
+        select
+        <include refid="Base_Column_List"/>
+        from user_info
+    </select>
+    
+    <update id="updateUserInfoByUnionId" parameterType="io.geekidea.springbootplus.api.vo.UserInfoQueryVo">
+        update user_info set
+        nickname = #{nickname},
+        sex = #{sex},
+        country = #{country},
+        province = #{province},
+        city = #{city},
+        language = #{language},
+        group_id = #{groupId},
+        telephone = #{telephone},
+        pwd = #{pwd},
+        sign = #{sign},
+        note = #{note}
+        where unionid = #{unionid}
+    </update>
+
+    <update id="bindTelephoneByUnionId" parameterType="io.geekidea.springbootplus.api.vo.UserInfoQueryVo">
+        update user_info set
+        telephone = #{telephone}
+        where unionid = #{unionid}
+    </update>
+
+</mapper>

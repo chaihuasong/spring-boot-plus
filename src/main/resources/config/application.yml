@@ -157,6 +157,10 @@ spring-boot-plus:
       /getSysUserInfo=anon
       /upload/**=anon
       /test/**=anon
+      /appSecureKey/**=anon
+      /userInfo/**=anon
+      /telephone/**=anon
+      /mail/**=anon
     # 权限配置
     permission:
         # 排除登陆登出相关
@@ -314,4 +318,3 @@ info:
   project-mybatis-plus-version: '@mybatis-plus-boot-starter.version@'
   project-version: '@project.version@'
 ############################## Spring boot admin end ###############################
-
