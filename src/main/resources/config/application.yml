@@ -2,7 +2,7 @@
 
 ############################# 访问路径、端口tomcat start #############################
 server:
-  port: 8888
+  port: 7777
   servlet:
     context-path: /api
   tomcat:
@@ -279,9 +279,9 @@ swagger:
     name: geekidea
     url: ''
   description: ''
-  title: ${pom.artifactId}
+  title: spring-boot-starter-parent
   url: ''
-  version: ${pom.version}
+  version: 4.2.3
 #################################### Swagger end ###################################
 
 

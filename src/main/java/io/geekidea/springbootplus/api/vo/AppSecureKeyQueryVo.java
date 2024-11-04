@@ -23,16 +23,16 @@ import java.util.Date;
 public class AppSecureKeyQueryVo implements Serializable {
     private static final long serialVersionUID = 1L;
 
-private Integer id;
+    private Long id;
 
-private String appName;
+    private String appName;
 
-private String platform;
+    private String platform;
 
-private String appId;
+    private String appId;
 
-private String appSecureKey;
+    private String appSecureKey;
 
-private String note;
+    private String note;
 
 }

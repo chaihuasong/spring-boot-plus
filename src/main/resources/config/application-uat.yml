@@ -16,7 +16,7 @@ spring-boot-plus:
       response-log-format: false
 
 server:
-  port: 8888
+  port: 7777
   servlet:
     context-path: /api
 spring:

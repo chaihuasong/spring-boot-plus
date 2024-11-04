@@ -4,7 +4,7 @@ spring-boot-plus:
   # 资源访问全路径前缀
   resource-access-url: http://47.105.159.10:${server.port}${server.servlet.context-path}${spring-boot-plus.resource-access-path}
 server:
-  port: 8888
+  port: 7777
   servlet:
     context-path: /api
 spring:

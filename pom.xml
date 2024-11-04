@@ -21,7 +21,7 @@
 
     <groupId>io.geekidea</groupId>
     <artifactId>spring-boot-plus</artifactId>
-    <version>2.0.SNAPSHOT</version>
+    <version>2.1.SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>spring-boot-plus</name>
@@ -46,8 +46,8 @@
         <project.build.sourceEncoding>${utf8}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${utf8}</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <spring-boot.version>2.2.5.RELEASE</spring-boot.version>
-        <spring-boot-admin.version>2.2.2</spring-boot-admin.version>
+        <spring-boot.version>2.4.3</spring-boot.version>
+        <spring-boot-admin.version>2.4.3</spring-boot-admin.version>
         <mybatis-plus-boot-starter.version>3.3.1</mybatis-plus-boot-starter.version>
         <swagger2.version>2.9.2</swagger2.version>
         <commons-lang3.version>3.9</commons-lang3.version>
@@ -88,12 +88,23 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.3</version>
+        <relativePath/>
+    </parent>
     <dependencies>
         <!-- spring-boot start -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.2.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+            <version>3.5.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -102,6 +113,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.114.Final</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -556,7 +572,7 @@
         <repository>
             <id>aliyun</id>
             <name>aliyun-maven</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <url>https://maven.aliyun.com/nexus/content/groups/public/</url>
         </repository>
         <!-- 阿里云spring仓库 -->
         <repository>
@@ -568,7 +584,7 @@
         <repository>
             <id>central</id>
             <name>maven-central</name>
-            <url>http://central.maven.org/maven2/</url>
+            <url>https://central.maven.org/maven2/</url>
         </repository>
     </repositories>
 
